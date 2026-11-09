@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">同声译</string>
+    <string name="hint_base">接口地址，例如 https://api.siliconflow.cn/v1</string>
+    <string name="start">开始监听</string>
+    <string name="stop">停止</string>
+</resources>

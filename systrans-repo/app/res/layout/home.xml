@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_paper">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:background="@drawable/corner_marks" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingTop="26dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="22dp">
+
+        <!-- 报头 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="同声译"
+                    android:textColor="@color/ink"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.16"
+                    android:text="LIVE TRANSLATION TERMINAL"
+                    android:textColor="@color/ink_55"
+                    android:textSize="8.5sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.12"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="7dp"
+                android:text="设置 / SET"
+                android:textColor="@color/ink"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/ink" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.14"
+                android:text="BUILD 4.3 / ANDROID"
+                android:textColor="@color/ink_55"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.14"
+                android:text="IDLE"
+                android:textColor="@color/ink_55"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <!-- 01 语言 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.18"
+            android:text="01 — 语言 LANGUAGE"
+            android:textColor="@color/ink_55"
+            android:textSize="8.5sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pill_src"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="11dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="11dp">
+
+                <TextView
+                    android:id="@+id/tv_src"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="英语"
+                    android:textColor="@color/ink"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_src_meta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12"
+                    android:text="SOURCE · EN"
+                    android:textColor="@color/ink_55"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="monospace"
+                android:text="→"
+                android:textColor="@color/ink_55"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/pill_tgt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="11dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="11dp">
+
+                <TextView
+                    android:id="@+id/tv_tgt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="简体中文"
+                    android:textColor="@color/ink"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tgt_meta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12"
+                    android:text="TARGET · ZH"
+                    android:textColor="@color/ink_55"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 02 引擎 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.18"
+            android:text="02 — 引擎 ENGINE"
+            android:textColor="@color/ink_55"
+            android:textSize="8.5sp" />
+
+        <LinearLayout
+            android:id="@+id/pill_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingTop="12dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="云端 · 硅基流动"
+                android:textColor="@color/ink"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="▸"
+                android:textColor="@color/ink_55"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- 主操作：印章 -->
+        <FrameLayout
+            android:id="@+id/stamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stamp_idle"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="22dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="开始翻译"
+                    android:textColor="@color/signal_ink"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/tv_action_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.3"
+                    android:text="START"
+                    android:textColor="#CCF8F4EC"
+                    android:textSize="8.5sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.06"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="就绪 / READY"
+            android:textColor="@color/ink_55"
+            android:textSize="9.5sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hair" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="SYSTEM SOUND IN · SUBTITLE OUT"
+            android:textColor="@color/ink_55"
+            android:textSize="8sp" />
+    </LinearLayout>
+</FrameLayout>
